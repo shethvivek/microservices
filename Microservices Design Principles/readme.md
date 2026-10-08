@@ -17,7 +17,7 @@ The focus is on ensuring each service has a clear responsibility, can be deploye
 
 Imagine a modern e-commerce platform built to handle thousands of daily users, a rich product catalog, secure payments, and real-time order processing. To achieve flexibility, scalability, and rapid evolution, the platform is architected as a set of specialized microservices.</br></br>Each service is responsible for a single business function, communicates over well-defined interfaces, and manages its own data. For a better understanding, please have a look at the following diagram:
 
-<<Insert Image 1>>
+![Image1](./images/1.png)
 
 Now, let’s try to understand the Core Microservices Design Principles by examining the above e-commerce example with multiple Microservices.
 
@@ -30,7 +30,7 @@ SRP means that each microservice should have only one clear, well-defined job or
 
 For a better understanding, please have a look at the following image:
 
-<<Insert Image 2>>
+![Image1](./images/SRP.png)
 
 
 <h4>Examples:</h4>
@@ -54,9 +54,10 @@ Independent Deployment means each microservice can be:
 * Tested,
 * Deployed, and
 * Updated
-</br>separately from the others. This means you can make changes or fix bugs in one service without needing to redeploy or change any other service. The following diagram illustrates this concept clearly.
 
-<<Insert Image 3>>
+separately from the others. This means you can make changes or fix bugs in one service without needing to redeploy or change any other service. The following diagram illustrates this concept clearly.
+
+![Image1](./images/Independent_Deployment.png)
 
 <h3>Decentralized Data Management</h3>
 
@@ -68,7 +69,7 @@ In a microservices architecture, decentralized data management means:
   
 This ensures clear ownership of data, reduces dependencies, and prevents tight coupling through shared databases. Let’s visualize this with a simple diagram.
 
-<<Insert Image 4>>
+![Image1](./images/DDM.png)
 
 <h3>Loose Coupling</h3>
 Loose coupling means that each microservice can work independently, with minimal knowledge of the internal workings of other services. They:
@@ -79,7 +80,7 @@ Loose coupling means that each microservice can work independently, with minimal
 
 For a better understanding, please refer to the following image.
 
-<<Insert Image 5>>
+![Image1](./images/Loose_Coupling.png)
 
 <h3>High Cohesion</h3>
 High cohesion means that the functions (actions) and data inside a microservice are closely related and focused on a single responsibility or domain area. In other words:
@@ -90,27 +91,27 @@ High cohesion means that the functions (actions) and data inside a microservice 
 
 The following diagram illustrates this concept clearly.
 
-<<Insert Image 6>>
+![Image1](./images/HC.png)
 
 <h3>Event-Driven Communication</h3>
 
 In an event-driven architecture, microservices communicate using asynchronous events or message passing rather than making synchronous direct calls. This enables each service to respond to system changes independently and asynchronously, thereby improving scalability. Let’s visualize this with a simple diagram.
 
-<<Insert Image 7>>
+![Image1](./images/EDC.png)
 
 <h3>Fault Isolation</h3>
 
 In microservices architecture, fault isolation means that if one microservice fails or experiences problems, the failure is contained within that service and does not cause other services or the entire system to crash. This improves the overall system’s resilience and availability. For a better understanding, please refer to the following image.
 
-<<Insert Image 8>>
+![Image1](./images/FI.png)
 
 <h3>Scalability</h3>
 
 In a microservices architecture, scalability means that each microservice can be scaled independently (either scaled up or scaled out) based on its own resource needs and workload, rather than scaling the entire application as a single large unit. This enables the efficient use of resources and improved performance under varying loads. This also makes your application more cost-effective and responsive. The following diagram illustrates this concept clearly.
 
-<<Insert Image 9>>
+![Image1](./images/Scalability.png)
 
 <h3>Technology Diversity</h3>
-Microservices architecture enables teams to select the most suitable technology stack, programming language, database, and tools for each microservice individually. This flexibility allows optimization of each service based on its unique functional and non-functional requirements. This flexibility helps each service achieve optimal performance, scalability, and developer productivity. Let’s visualize this with a simple diagram.
+Microservices architecture enables teams to select the most suitable technology stack, programming language, database, and tools for each microservice individually. This flexibility allows optimization of each service based on its unique functional and non-functional requirements. This flexibility helps each service achieve optimal performance, scalability, and developer productivity. Let’s visualize this with a simple diagram.</br>
 
-<<Insert Image 10>>
+![Image1](./images/TD.png)
