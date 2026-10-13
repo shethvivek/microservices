@@ -34,6 +34,7 @@ For a better understanding, please have a look at the following image:
 
 
 <h4>Examples:</h4>
+
 * User Service focuses only on users. It does NOT handle orders or payments.
 * Product Service focuses only on products. It does NOT process orders or manage payments.
 * Order Service handles the entire order lifecycle, but it does NOT handle user authentication or payment processing.
