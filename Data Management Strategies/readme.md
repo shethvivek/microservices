@@ -252,14 +252,14 @@
 <hr>
 <h3 style="text-align: justify;"><span style="font-family: arial, helvetica, sans-serif;"><strong>Patterns for Data Consistency</strong></span></h3>
 <p style="text-align: justify;"><span style="font-family: arial, helvetica, sans-serif;">To handle consistency in microservices, several well-known patterns exist. Now let’s look at the <strong>main patterns</strong> used to keep data consistent in microservices.</span></p>
-<h5 style="text-align: justify;"><span style="font-family: arial, helvetica, sans-serif;"><strong>Saga Pattern</strong></span></h5>
+<h4 style="text-align: justify;"><span style="font-family: arial, helvetica, sans-serif;"><strong>Saga Pattern</strong></span></h4>
 <p style="text-align: justify;"><span style="font-family: arial, helvetica, sans-serif;">A <strong>Saga</strong> is the most popular way to manage distributed transactions in microservices. Instead of one big global transaction, a <strong>Saga</strong> breaks a large business transaction into a sequence of <strong>smaller local transactions</strong>, each executed by a different service, with <strong>compensating actions</strong> to undo work if something fails.</span></p><div class="code-block code-block-8" style="margin: 8px 0; clear: both;">
 </div><ul style="text-align: justify;">
 <li><span style="font-family: arial, helvetica, sans-serif;">After completing its local transaction, a service <strong>publishes an event</strong> to trigger the next step.</span></li>
 <li><span style="font-family: arial, helvetica, sans-serif;">If something fails, the system triggers <strong>compensating actions</strong> to undo previous work.</span></li>
 </ul>
-<h5 style="text-align: justify;"><span style="font-family: arial, helvetica, sans-serif;"><strong>Styles of Saga</strong></span></h5>
-<h5 style="text-align: justify;"><span style="font-family: arial, helvetica, sans-serif;"><strong>Choreography (Decentralized)</strong></span></h5>
+<h4 style="text-align: justify;"><span style="font-family: arial, helvetica, sans-serif;"><strong>Styles of Saga</strong></span></h4>
+<h4 style="text-align: justify;"><span style="font-family: arial, helvetica, sans-serif;"><strong>Choreography (Decentralized)</strong></span></h4>
 <p style="text-align: justify;"><span style="font-family: arial, helvetica, sans-serif;">Services communicate via <strong>events</strong>. Each service listens for an event, performs its own local transaction, and publishes the next event.</span></p>
 <ul style="text-align: justify;">
 <li><span style="font-family: arial, helvetica, sans-serif;"><strong>Pros:</strong> Simple to start, no central controller.</span></li>
@@ -272,7 +272,7 @@
 <li><span style="font-family: arial, helvetica, sans-serif;">Payment Service → processes payment, publishes <strong>PaymentCompleted</strong></span></li>
 </ul>
 <p style="text-align: justify;"><span style="font-family: arial, helvetica, sans-serif;"><strong>Analogy</strong>: Think of a wedding dance where each dancer knows their steps and reacts to others. Works well for small groups, but becomes chaotic (disorganized, confusing, and lacking order) as more people join.</span></p>
-<h5 style="text-align: justify;"><span style="font-family: arial, helvetica, sans-serif;"><strong>Orchestration (Centralized)</strong></span></h5>
+<h4 style="text-align: justify;"><span style="font-family: arial, helvetica, sans-serif;"><strong>Orchestration (Centralized)</strong></span></h4>
 <p style="text-align: justify;"><span style="font-family: arial, helvetica, sans-serif;">A <strong>Saga Orchestrator</strong> (central <strong>orchestrator service</strong>) manages the workflow and tells each service what to do next. It keeps track of the flow, retries, and compensations.</span></p>
 <ul style="text-align: justify;">
 <li><span style="font-family: arial, helvetica, sans-serif;"><strong>Pros:</strong> Clear visibility, easier debugging, retries, and timeouts managed in one place.</span></li>
